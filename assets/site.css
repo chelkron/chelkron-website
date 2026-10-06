@@ -124,6 +124,26 @@ body.menu-open{overflow:hidden}
 .contact-in>div>p{margin:14px 0 0;color:rgba(255,255,255,.82);max-width:46ch}
 .contact-list{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
 
+/* Contact pop-up */
+.contact-note{flex-basis:100%;margin:0;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,.12);color:#FFFFFF;font-size:15px}
+.contact-note.bad{background:rgba(254,202,202,.18)}
+.cf{width:min(640px,calc(100% - 32px));max-height:calc(100% - 32px);padding:0;border:0;border-radius:20px;background:#FFFFFF;color:var(--ink);box-shadow:0 40px 80px -20px rgba(15,23,42,.45)}
+.cf::backdrop{background:rgba(15,23,42,.55)}
+.cf-form{display:flex;flex-direction:column;gap:16px;padding:28px}
+.cf-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.cf-top h2{margin:0;font-family:'Bricolage Grotesque','Geist',sans-serif;font-weight:700;font-size:28px;letter-spacing:-.02em;line-height:1.1}
+.cf-sub{margin:-8px 0 0;color:var(--slate);font-size:15px}
+.cf-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.cf label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:var(--ink)}
+.cf label small{font-size:inherit;font-weight:400;color:var(--slate)}
+.cf input,.cf select,.cf textarea{width:100%;min-height:46px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:#FFFFFF;font:inherit;font-size:16px;font-weight:400;color:var(--ink)}
+.cf textarea{resize:vertical;min-height:120px}
+.cf input:focus,.cf select:focus,.cf textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.18)}
+.cf-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cf-msg{margin:0;padding:10px 14px;border-radius:10px;background:#FEF2F2;color:#B91C1C;font-size:15px}
+.cf-form .btn{align-self:flex-start;border:0;cursor:pointer}
+.cf-form .btn:disabled{opacity:.7;cursor:default}
+
 /* Footer */
 .foot{padding:28px 0;border-top:1px solid var(--line)}
 .foot-in{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px}
@@ -166,4 +186,7 @@ body.menu-open{overflow:hidden}
   .contact-list{width:100%;flex-direction:column;align-items:stretch}
   .contact-list .btn{width:100%}
   .foot p{margin:0}
+  .cf-form{padding:20px}
+  .cf-row{grid-template-columns:minmax(0,1fr)}
+  .cf-form .btn{align-self:stretch}
 }
