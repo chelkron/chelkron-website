@@ -1,6 +1,8 @@
 # chelkron.com on cPanel (Apache)
 Options -Indexes
 DirectoryIndex index.html
+# /terms and /privacy-policy are served by the rewrite below, so Apache mustn't first redirect them to a trailing slash
+DirectorySlash Off
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
@@ -8,6 +10,9 @@ DirectoryIndex index.html
     RewriteCond %{HTTPS} !=on [OR]
     RewriteCond %{HTTP_HOST} ^www\. [NC]
     RewriteRule ^ https://chelkron.com%{REQUEST_URI} [R=301,L]
+
+    # Legal pages at clean addresses (/terms, /privacy-policy) without a trailing-slash redirect
+    RewriteRule ^(terms|privacy-policy)/?$ $1/index.html [L]
 </IfModule>
 
 # Never serve the repo's own files

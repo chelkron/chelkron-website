@@ -190,3 +190,33 @@ body.menu-open{overflow:hidden}
   .cf-row{grid-template-columns:minmax(0,1fr)}
   .cf-form .btn{align-self:stretch}
 }
+
+/* Legal pages (/terms, /privacy-policy) */
+.legal-head{background:var(--mist);border-bottom:1px solid var(--line);padding:72px 0 48px}
+.legal-head h1{margin:0;font-family:'Bricolage Grotesque','Geist',sans-serif;font-weight:700;font-size:clamp(36px,5vw,56px);line-height:1.05;letter-spacing:-.03em}
+.legal-head p{margin:14px 0 0;color:var(--slate);font-size:17px;max-width:62ch}
+.legal-head .upd{font-size:14px;margin-top:18px}
+.legal-wrap{display:grid;grid-template-columns:220px minmax(0,1fr);gap:56px;padding-top:56px;padding-bottom:96px}
+.legal-toc{position:sticky;top:96px;align-self:start;display:flex;flex-direction:column;gap:2px;font-size:14px}
+.legal-toc b{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin-bottom:8px}
+.legal-toc a{color:var(--slate);text-decoration:none;padding:5px 0;line-height:1.35}
+.legal-toc a:hover{color:var(--ink)}
+.legal{max-width:720px}
+.legal section{scroll-margin-top:88px;padding-bottom:28px;margin-bottom:28px;border-bottom:1px solid var(--line)}
+.legal section:last-child{border-bottom:0}
+.legal h2{margin:0 0 12px;font-size:21px;font-weight:600;letter-spacing:-.01em}
+.legal h3{margin:18px 0 8px;font-size:16px;font-weight:600}
+.legal p{margin:0 0 12px;color:#334155;line-height:1.7}
+.legal ul{margin:0 0 12px;padding-inline-start:22px;color:#334155;line-height:1.7}
+.legal li{margin-bottom:6px}
+.legal li b,.legal p b{color:var(--ink);font-weight:600}
+.legal .note{padding:14px 16px;border-radius:12px;background:var(--mist);border:1px solid var(--line);font-size:15px}
+.foot-legal{display:flex;gap:20px}
+.foot-legal a{color:var(--slate);text-decoration:none;font-size:14px}
+.foot-legal a:hover{color:var(--ink)}
+@media (max-width:860px){
+  .legal-wrap{grid-template-columns:minmax(0,1fr);gap:24px;padding-top:32px;padding-bottom:64px}
+  .legal-toc{position:static;flex-direction:row;flex-wrap:wrap;gap:6px 16px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+  .legal-toc b{width:100%;margin:0}
+  .legal-head{padding:48px 0 32px}
+}
