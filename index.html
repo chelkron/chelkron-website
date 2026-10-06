@@ -14,7 +14,7 @@
 <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=2">
+<link rel="stylesheet" href="/assets/site.css?v=3">
 </head>
 <body>
 
@@ -163,11 +163,44 @@
             <p>Questions about Workforce or Mail, setting up your account, or billing? Our team is here to help.</p>
         </div>
         <div class="contact-list">
-            <a class="btn btn-light" href="mailto:support@chelkron.com">support@chelkron.com</a>
-            <a class="btn btn-line" href="tel:+2348081800123">0808 180 0123</a>
+            <button type="button" class="btn btn-light" onclick="contactOpen()">Send us a message</button>
+            <a class="btn btn-line" href="mailto:support@chelkron.com">support@chelkron.com</a>
         </div>
+        <p class="contact-note" id="contact-note" role="status" hidden></p>
     </div>
 </section>
+
+<dialog class="cf" id="cf" aria-labelledby="cf-h">
+    <form class="cf-form" id="cf-form" method="post" action="/contact.php" onsubmit="return contactSend(event)">
+        <div class="cf-top">
+            <h2 id="cf-h">Send us a message</h2>
+            <button type="button" class="menu-x cf-x" aria-label="Close" onclick="contactClose()">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
+        </div>
+        <p class="cf-sub">We'll reply to the email address you give us.</p>
+        <div class="cf-row">
+            <label>Your name<input name="name" type="text" maxlength="100" autocomplete="name" required></label>
+            <label>Email<input name="email" type="email" maxlength="150" autocomplete="email" required></label>
+        </div>
+        <div class="cf-row">
+            <label><span>Company <small>(optional)</small></span><input name="company" type="text" maxlength="120" autocomplete="organization"></label>
+            <label>About
+                <select name="topic">
+                    <option>Chelkron Workforce</option>
+                    <option>Chelkron Mail</option>
+                    <option>Billing</option>
+                    <option>Something else</option>
+                </select>
+            </label>
+        </div>
+        <label>Message<textarea name="message" rows="5" maxlength="5000" minlength="10" required></textarea></label>
+        <label class="cf-hp" aria-hidden="true">Leave this empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+        <input type="hidden" name="t" value="0">
+        <p class="cf-msg" id="cf-msg" role="alert" hidden></p>
+        <button type="submit" class="btn btn-blue" id="cf-btn">Send message</button>
+    </form>
+</dialog>
 </main>
 
 <footer class="foot">
@@ -201,6 +234,49 @@ document.addEventListener('keydown', function(e) {
         else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     }
 });
+// Contact pop-up: a native <dialog> (Escape and the X close it). Without JavaScript the form still posts to /contact.php.
+function contactOpen() {
+    var d = document.getElementById('cf'), f = document.getElementById('cf-form');
+    window.cfOpened = Date.now();
+    document.getElementById('cf-msg').hidden = true;
+    if (d.showModal) d.showModal(); else d.setAttribute('open', '');
+    document.body.classList.add('menu-open');
+    f.name.focus();
+}
+function contactClose() {
+    var d = document.getElementById('cf');
+    if (d.close) d.close(); else d.removeAttribute('open');
+}
+document.getElementById('cf').addEventListener('close', function() { document.body.classList.remove('menu-open'); });
+document.getElementById('cf').addEventListener('click', function(e) { if (e.target === this) contactClose(); });   // click outside the box
+function contactSend(e) {
+    if (!window.fetch) return true;
+    e.preventDefault();
+    var f = document.getElementById('cf-form'), btn = document.getElementById('cf-btn'), msg = document.getElementById('cf-msg');
+    f.t.value = Math.max(1, Date.now() - (window.cfOpened || 0));   // how long the form was open
+    btn.disabled = true; btn.textContent = 'Sending…'; msg.hidden = true;
+    fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
+        .then(function(r) { return r.json(); })
+        .then(function(res) {
+            btn.disabled = false; btn.textContent = 'Send message';
+            if (!res.ok) { msg.textContent = res.message; msg.hidden = false; return; }
+            f.reset(); contactClose(); contactNote(res.message, true);
+        })
+        .catch(function() {
+            btn.disabled = false; btn.textContent = 'Send message';
+            msg.textContent = 'We could not send your message just now. Please email support@chelkron.com instead.'; msg.hidden = false;
+        });
+    return false;
+}
+function contactNote(text, ok) {
+    var n = document.getElementById('contact-note');
+    n.textContent = text; n.className = 'contact-note' + (ok ? '' : ' bad'); n.hidden = false;
+}
+(function() {   // back from /contact.php without JavaScript
+    var q = new URLSearchParams(location.search);
+    if (q.get('sent')) contactNote('Thanks — your message is on its way. We\'ll reply by email.', true);
+    else if (q.get('error')) contactNote(q.get('error'), false);
+})();
 window.addEventListener('resize', function() { if (window.innerWidth > 760 && !document.getElementById('menu').hidden) menu(false); });
 </script>
 </body>
