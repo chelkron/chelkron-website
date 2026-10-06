@@ -6,7 +6,7 @@
 <title>Chelkron Technologies — software for African businesses</title>
 <meta name="description" content="Chelkron Technologies builds software that African businesses run on. Chelkron Workforce runs your team; Chelkron Mail gives you email on your own domain.">
 <meta property="og:title" content="Chelkron Technologies">
-<meta property="og:description" content="We build the software African businesses run on — starting with Chelkron Workforce and Chelkron Mail.">
+<meta property="og:description" content="We build the software African businesses run on: Chelkron Workforce for your team, Chelkron Mail for email on your own domain.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://chelkron.com/">
 <meta name="theme-color" content="#0F2A5C">
@@ -14,7 +14,7 @@
 <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=1">
+<link rel="stylesheet" href="/assets/site.css?v=2">
 </head>
 <body>
 
@@ -30,8 +30,29 @@
             <a href="#contact">Contact</a>
         </nav>
         <a class="btn btn-ghost top-cta" href="#products">Our products</a>
+        <button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu" onclick="menu(true)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
     </div>
 </header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="wrap menu-top">
+        <a class="brand" href="/" onclick="menu(false)"><img src="/assets/logo.svg" alt="" width="30" height="33"><span>Chelkron</span></a>
+        <button type="button" class="menu-x" aria-label="Close menu" onclick="menu(false)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+    </div>
+    <nav class="wrap menu-links" aria-label="Menu">
+        <a href="#products" onclick="menu(false)">Products</a>
+        <a href="#approach" onclick="menu(false)">How we build</a>
+        <a href="#contact" onclick="menu(false)">Contact</a>
+    </nav>
+    <div class="wrap menu-foot">
+        <a class="btn btn-blue" href="https://workforce.chelkron.com/">Chelkron Workforce</a>
+        <a class="btn btn-ghost" href="https://mail.chelkron.com/">Chelkron Mail</a>
+    </div>
+</div>
 
 <main>
 <section class="hero">
@@ -39,9 +60,8 @@
         <path d="M263 185 253 188 241 194 233 200 221 214 217 221 212 236 212 264 216 276 222 288 240 306 251 312 264 316 290 316 306 311 316 305 329 292 338 278 343 264 343 237 339 224 331 210 324 203 312 193 302 188 286 184ZM252 68 217 75 197 82 180 90 149 111 125 135 109 158 94 191 88 214 86 228 86 270 93 304 100 324 109 342 129 370 158 397 188 415 224 428 253 433 292 433 330 425 348 418 370 407 400 387 414 374 414 371 376 330 356 347 328 363 314 368 290 373 262 373 245 370 224 363 207 354 190 341 174 322 162 302 154 280 151 264 151 233 158 204 171 179 191 156 212 141 241 129 263 125 288 125 310 129 328 136 346 145 360 155 376 171 414 124 402 113 384 99 354 83 340 78 316 71 296 68Z"/>
     </svg>
     <div class="wrap hero-in">
-        <p class="place">Chelkron Technologies Limited &nbsp;/&nbsp; Port Harcourt, Nigeria</p>
         <h1>We build the software African businesses run on.</h1>
-        <p class="lead">Our first two products look after your people and your email. Both are priced in your currency, translated into four languages and built for how work actually happens here. More are on the way.</p>
+        <p class="lead">Our products look after your people and your email. They're priced in your currency, translated into four languages and built for how work actually happens here.</p>
         <div class="hero-cta">
             <a class="btn btn-light" href="#products">See the products</a>
             <a class="btn btn-line" href="#contact">Talk to us</a>
@@ -51,7 +71,7 @@
 
 <section class="products" id="products" aria-labelledby="products-h">
     <div class="wrap">
-        <h2 id="products-h" class="sec-h">Two products today</h2>
+        <h2 id="products-h" class="sec-h">Our products</h2>
         <p class="sec-p">Each one works on its own. Use one, or both.</p>
 
         <article class="prod">
@@ -130,8 +150,8 @@
             </div>
         </div>
         <div class="next">
-            <p class="next-h">What comes next</p>
-            <p>Chelkron is a technology company for the long run. Workforce and Mail are the start, and each new product will come with the same local pricing and the same four languages. If there's a tool your business is missing, tell us.</p>
+            <p class="next-h">Built for the long run</p>
+            <p>We keep improving the products you rely on, guided by what our customers ask for. Your data stays yours, protected by encrypted connections, and when you need help you reach a real person on our support team.</p>
         </div>
     </div>
 </section>
@@ -140,11 +160,11 @@
     <div class="wrap contact-in">
         <div>
             <h2 id="contact-h">Talk to us</h2>
-            <p>Questions about a product, a partnership or something you'd like us to build.</p>
+            <p>Questions about Workforce or Mail, setting up your account, or billing? Our team is here to help.</p>
         </div>
         <div class="contact-list">
             <a class="btn btn-light" href="mailto:support@chelkron.com">support@chelkron.com</a>
-            <p>Chelkron Technologies Limited<br>Port Harcourt, Rivers State, Nigeria</p>
+            <a class="btn btn-line" href="tel:+2348081800123">0808 180 0123</a>
         </div>
     </div>
 </section>
@@ -161,6 +181,27 @@
         <p>&copy; <span id="yr">2026</span> Chelkron Technologies Limited</p>
     </div>
 </footer>
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+// Phone menu: opens full screen, closes with the X, Escape or by choosing a link.
+function menu(open) {
+    var m = document.getElementById('menu'), btn = document.querySelector('.menu-btn');
+    m.hidden = !open;
+    document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    (open ? m.querySelector('.menu-x') : btn).focus({ preventScroll: true });
+}
+document.addEventListener('keydown', function(e) {
+    var m = document.getElementById('menu');
+    if (m.hidden) return;
+    if (e.key === 'Escape') { menu(false); return; }
+    if (e.key === 'Tab') {   // keep focus inside the open menu
+        var f = m.querySelectorAll('a, button'), first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+});
+window.addEventListener('resize', function() { if (window.innerWidth > 760 && !document.getElementById('menu').hidden) menu(false); });
+</script>
 </body>
 </html>
