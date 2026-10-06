@@ -2,7 +2,9 @@
 
 The Chelkron Technologies home page. Plain HTML and CSS, no build step.
 
-- `index.html` — the page
+- `index.html` — the home page
+- `terms/index.html` — Terms of Use (served at /terms)
+- `privacy-policy/index.html` — Privacy Policy (served at /privacy-policy)
 - `assets/site.css` — styles
 - `assets/logo.svg`, `assets/favicon.png` — brand
 - `contact.php` — sends the "Send us a message" pop-up form to support@chelkron.com (needs PHP, which cPanel has)
@@ -10,7 +12,7 @@ The Chelkron Technologies home page. Plain HTML and CSS, no build step.
 
 ## Publishing on cPanel (Orangehost)
 
-Upload `index.html`, `contact.php`, `.htaccess` and the `assets` folder into `public_html`, replacing what's there.
+Upload `index.html`, `contact.php`, `.htaccess` and the `assets`, `terms` and `privacy-policy` folders into `public_html`, replacing what's there.
 Or use cPanel's **Git Version Control** to clone this repo and deploy it to `public_html`.
 
 Check the old site's files first: anything in `public_html` you still need (for example email
