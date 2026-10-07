@@ -51,7 +51,12 @@ $headers = [
     'Content-Type: text/plain; charset=UTF-8',
     'X-Mailer: chelkron.com',
 ];
-$subject = '=?UTF-8?B?' . base64_encode('[chelkron.com] ' . $topic . ' — ' . $name) . '?=';
+// Plain-text subjects stay as they are; anything else is encoded in short pieces that every mail program can read
+// (one long encoded piece over 75 characters shows up as =?UTF-8?B?…?= in some inboxes).
+function mail_subject(string $s): string {
+    return preg_match('/^[\x20-\x7E]*$/', $s) ? $s : mb_encode_mimeheader($s, 'UTF-8', 'B', "\r\n");
+}
+$subject = mail_subject('[chelkron.com] ' . $topic . ' - ' . $name);
 $sent = @mail(TO, $subject, $body, implode("\r\n", $headers), '-f' . FROM);
 if (!$sent) done(false, 'We could not send your message just now. Please email ' . TO . ' instead.', $json);
 
