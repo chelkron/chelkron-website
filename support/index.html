@@ -80,14 +80,14 @@
                 <h3>WhatsApp</h3>
                 <p>Message us on WhatsApp and carry on the conversation from your phone.</p>
                 <a class="btn btn-blue" href="https://wa.me/2349075885276?text=Hello%20Chelkron%20Support%2C%20" target="_blank" rel="noopener">Message us</a>
-                <small class="ch-meta"><a href="https://wa.me/2349075885276" target="_blank" rel="noopener">+234 907 588 5276</a> · messages only</small>
+                <small class="ch-meta">Opens WhatsApp on your phone or computer</small>
             </article>
             <article class="ch">
                 <span class="ch-ic ic-mail" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span>
                 <h3>Email</h3>
                 <p>Write to us from your own email. Good for longer questions and attachments.</p>
                 <a class="btn btn-blue" href="mailto:support@chelkron.com">Email us</a>
-                <small class="ch-meta"><a href="mailto:support@chelkron.com">support@chelkron.com</a></small>
+                <small class="ch-meta">Opens your email app</small>
             </article>
             <article class="ch">
                 <span class="ch-ic ic-form" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span>
@@ -240,7 +240,7 @@ function sendRequest(e) {
                 f.reset();
             } else { msg.textContent = j.message || 'Something went wrong. Please try again.'; msg.hidden = false; }
         })
-        .catch(function () { msg.textContent = 'We could not send your request. Please check your connection, or email support@chelkron.com.'; msg.hidden = false; })
+        .catch(function () { msg.textContent = 'We could not send your request. Please check your connection, or use live chat or WhatsApp above.'; msg.hidden = false; })
         .then(function () { btn.disabled = false; btn.textContent = 'Send request'; });
     return false;
 }
