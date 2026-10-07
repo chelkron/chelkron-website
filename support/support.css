@@ -1,0 +1,60 @@
+/* support.chelkron.com — builds on chelkron.com/assets/site.css */
+.brand-tag{font-family:'Geist',sans-serif;font-weight:500;font-size:15px;letter-spacing:0;color:var(--slate);margin-inline-start:4px;padding-inline-start:10px;border-inline-start:1px solid var(--line)}
+
+.s-hero{padding:104px 0 112px}
+.s-eyebrow{margin:0 0 18px;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#9CC3F7}
+
+/* Channels */
+.s-channels{padding:88px 0 96px}
+.ch-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:40px}
+.ch{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:28px 24px 24px;border:1px solid var(--line);border-radius:18px;background:#FFFFFF;transition:border-color .15s,box-shadow .15s}
+.ch:hover{border-color:#B9C7DA;box-shadow:0 24px 48px -32px rgba(15,42,92,.35)}
+.ch h3{margin:6px 0 0;font-size:20px;font-weight:600;letter-spacing:-.01em}
+.ch p{margin:0;color:var(--slate);font-size:15px;line-height:1.55;flex:1 1 auto}
+.ch .btn{margin-top:10px;height:44px;width:100%;border:0;cursor:pointer;font-size:15px}
+.ch-meta{font-size:13px;line-height:1.5;color:var(--slate);min-height:3em}
+.ch-meta a{color:var(--slate);text-decoration:none;font-weight:600;white-space:nowrap}
+.ch-meta a:hover{color:var(--ink);text-decoration:underline}
+.ch-ic{width:48px;height:48px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.ic-chat{background:#EFF6FF;color:#1D4ED8}
+.ic-wa{background:#ECFDF3;color:#15803D}
+.ic-mail{background:#F5F3FF;color:#6D28D9}
+.ic-form{background:#FFF7ED;color:#C2410C}
+.ic-ok{background:#ECFDF3;color:#15803D}
+
+/* Support request */
+.s-request{background:var(--mist);padding:96px 0 104px;scroll-margin-top:68px}
+.rq-in{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:start}
+.rq-tips{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+.rq-tips b{display:block;font-size:16px;font-weight:600;margin-bottom:10px}
+.rq-tips ul{margin:0;padding-inline-start:20px;color:var(--slate);font-size:15px;line-height:1.6}
+.rq-tips li{margin-bottom:8px}
+.rq-tips em{font-style:normal;color:var(--ink);overflow-wrap:anywhere}
+.rq-safe{margin:16px 0 0;padding:12px 14px;border-radius:12px;background:#FFFFFF;border:1px solid var(--line);font-size:14px;color:var(--ink)}
+
+/* The form uses the pop-up form's field styles (.cf) as a card on the page */
+.cf.rq-form{width:auto;max-height:none;padding:32px;border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 60px -40px rgba(15,42,92,.35)}
+.rq-fields{display:flex;flex-direction:column;gap:16px}
+.rq-fields[hidden]{display:none}
+.rq-fields .btn{align-self:flex-start;border:0;cursor:pointer}
+.rq-fields .btn:disabled{opacity:.7;cursor:default}
+.rq-done{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:8px 0;outline:none}
+.rq-done[hidden]{display:none}
+.rq-done h3{margin:6px 0 0;font-family:'Bricolage Grotesque','Geist',sans-serif;font-weight:700;font-size:28px;letter-spacing:-.02em}
+.rq-done p{margin:0 0 8px;color:var(--slate)}
+
+@media (max-width:1060px){
+  .ch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .rq-in{grid-template-columns:minmax(0,1fr);gap:32px}
+}
+@media (max-width:640px){
+  .brand-tag{display:none}
+  .s-hero{padding:72px 0 80px}
+  .s-channels{padding:64px 0 72px}
+  .ch-grid{grid-template-columns:minmax(0,1fr);gap:14px;margin-top:28px}
+  .s-request{padding:64px 0 72px}
+  .cf.rq-form{padding:20px}
+  .rq-fields .btn{align-self:stretch}
+}
