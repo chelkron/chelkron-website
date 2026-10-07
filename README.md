@@ -44,5 +44,6 @@ Publishing on cPanel:
 2. Upload the `support` folder into `public_html` (or deploy the repo as usual).
 3. **SSL/TLS Status → Run AutoSSL** so the subdomain gets a certificate.
 
-Live chat uses Tawk.to (free). Until its two IDs are set at the top of the script in `support/index.html`
-(`TAWK_PROPERTY`, `TAWK_WIDGET`), "Start a chat" opens WhatsApp instead.
+Live chat uses Tawk.to (free), property "Chelkron Support". Its two IDs are at the top of the script in
+`support/index.html` (`TAWK_PROPERTY`, `TAWK_WIDGET`); emptied, "Start a chat" opens WhatsApp instead.
+Answer chats in the Tawk.to dashboard or its phone app.
