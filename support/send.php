@@ -65,7 +65,7 @@ function mail_subject(string $s): string {
 }
 $subject = mail_subject("[$ref]$short - $topic - $name");
 $sent = @mail(TO, $subject, $body, implode("\r\n", $headers), '-f' . FROM);
-if (!$sent) done(false, 'We could not send your request just now. Please email ' . TO . ' or message us on WhatsApp.', $json);
+if (!$sent) done(false, 'We could not send your request just now. Please try again, or use live chat or WhatsApp.', $json);
 
 $hits[] = time();
 @file_put_contents($file, json_encode(array_values($hits)), LOCK_EX);
