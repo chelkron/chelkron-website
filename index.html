@@ -160,11 +160,11 @@
     <div class="wrap contact-in">
         <div>
             <h2 id="contact-h">Talk to us</h2>
-            <p>Questions about Workforce or Mail, setting up your account, or billing? Our team is here to help.</p>
+            <p>Questions about Workforce or Mail, setting up your account, or billing? Send us a message, or visit our support page for live chat, WhatsApp and more.</p>
         </div>
         <div class="contact-list">
             <button type="button" class="btn btn-light" onclick="contactOpen()">Send us a message</button>
-            <a class="btn btn-line" href="mailto:support@chelkron.com">support@chelkron.com</a>
+            <a class="btn btn-line" href="https://support.chelkron.com/">Get support</a>
         </div>
         <p class="contact-note" id="contact-note" role="status" hidden></p>
     </div>
@@ -210,7 +210,6 @@
             <a href="https://workforce.chelkron.com/">Workforce</a>
             <a href="https://mail.chelkron.com/">Mail</a>
             <a href="https://support.chelkron.com/">Support</a>
-            <a href="mailto:support@chelkron.com">Contact</a>
         </nav>
         <nav class="foot-legal" aria-label="Legal"><a href="/terms">Terms of Use</a><a href="/privacy-policy">Privacy Policy</a></nav>
         <p>&copy; <span id="yr">2026</span> Chelkron Technologies Limited</p>
@@ -266,7 +265,7 @@ function contactSend(e) {
         })
         .catch(function() {
             btn.disabled = false; btn.textContent = 'Send message';
-            msg.textContent = 'We could not send your message just now. Please email support@chelkron.com instead.'; msg.hidden = false;
+            msg.textContent = 'We could not send your message just now. Please visit support.chelkron.com instead.'; msg.hidden = false;
         });
     return false;
 }
