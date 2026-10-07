@@ -1,0 +1,12 @@
+# support.chelkron.com on cPanel (Apache). In cPanel, the subdomain's document root is public_html/support.
+# This folder has its own rewrite rules (the main site's rules don't apply here).
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Always https://support.chelkron.com (also sends chelkron.com/support here)
+    RewriteCond %{HTTPS} !=on [OR]
+    RewriteCond %{HTTP_HOST} !^support\.chelkron\.com$ [NC]
+    RewriteRule ^(.*)$ https://support.chelkron.com/$1 [R=301,L]
+</IfModule>
