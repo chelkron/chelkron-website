@@ -9,7 +9,7 @@ const SITE_PLANS = [
     'workforce' => [
         'name' => 'Chelkron Workforce', 'signup' => 'https://workforce.chelkron.com/signup', 'unit' => 'staff',
         'plans' => [
-            ['name' => 'Micro',      'price' => 6900,   'limit' => 'Up to 5 staff',  'points' => ['200 leads in the CRM', 'Attendance, tasks and team chat', 'Payroll and payslips']],
+            ['name' => 'Micro',      'price' => 6900,   'limit' => 'Up to 5 staff',  'points' => ['200 leads in the CRM', 'Attendance, leave, tasks and team chat', 'Payroll and payslips']],
             ['name' => 'Starter',    'price' => 14500,  'limit' => 'Up to 10 staff', 'points' => ['500 leads in the CRM', 'Everything in Micro', 'Free Chelkron Mail offer'], 'bundle' => true],
             ['name' => 'Growth',     'price' => 42000,  'limit' => 'Up to 30 staff', 'points' => ['Unlimited leads', 'Everything in Starter', 'Free Chelkron Mail offer'], 'bundle' => true, 'pick' => true],
             ['name' => 'Enterprise', 'price' => 129000, 'limit' => 'Up to 75 staff', 'points' => ['Unlimited leads', 'Your own custom domain', 'Priority support', 'Free Chelkron Mail offer'], 'bundle' => true],

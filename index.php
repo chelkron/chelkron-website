@@ -40,7 +40,8 @@ site_head('', 'Chelkron Technologies builds software that African businesses run
                 <ul class="feat">
                     <li><b>People</b>Staff records, roles and profiles</li>
                     <li><b>Attendance</b>Clock-in from the phone, with location checks</li>
-                    <li><b>Payroll</b>Salaries, tax, pension and payslips</li>
+                    <li><b>Leave</b>Requests, approvals, balances and holidays</li>
+                    <li><b>Payroll</b>Salaries, tax and payslips, linked to attendance</li>
                     <li><b>Sales</b>Leads, pipeline and targets</li>
                     <li><b>Work</b>Tasks, reports, calendar and team chat</li>
                 </ul>
