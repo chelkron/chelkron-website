@@ -14,7 +14,7 @@ site_head('Pricing', 'Plans and prices for Chelkron Workforce and Chelkron Mail.
 <section class="plans-sec" id="workforce" aria-labelledby="wf-h">
     <div class="wrap">
         <h2 id="wf-h" class="plans-h"><img src="/assets/workforce-icon.svg" alt="" width="36" height="36">Chelkron Workforce</h2>
-        <p class="sec-p">CRM, HR, payroll, appraisals, tasks and team chat. <a href="/workforce">See what's included</a></p>
+        <p class="sec-p">CRM, HR, payroll, leave, appraisals, tasks and team chat. <a href="/workforce">See what's included</a></p>
         <?php site_plan_cards('workforce'); ?>
     </div>
 </section>
