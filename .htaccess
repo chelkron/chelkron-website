@@ -1,7 +1,7 @@
 # chelkron.com on cPanel (Apache)
 Options -Indexes
-DirectoryIndex index.html
-# /terms and /privacy-policy are served by the rewrite below, so Apache mustn't first redirect them to a trailing slash
+DirectoryIndex index.php index.html
+# The pages (/workforce, /pricing, /terms …) are served by the rewrite below, so Apache mustn't first redirect them to a trailing slash
 DirectorySlash Off
 
 <IfModule mod_rewrite.c>
@@ -11,22 +11,25 @@ DirectorySlash Off
     RewriteCond %{HTTP_HOST} ^www\. [NC]
     RewriteRule ^ https://chelkron.com%{REQUEST_URI} [R=301,L]
 
-    # Legal pages at clean addresses (/terms, /privacy-policy) without a trailing-slash redirect
-    RewriteRule ^(terms|privacy-policy)/?$ $1/index.html [L]
+    # Pages at clean addresses (/workforce, /pricing, /terms …) without a trailing-slash redirect
+    RewriteRule ^(workforce|mail|pricing|about|contact|terms|privacy-policy)/?$ $1/index.php [L]
+    # Old addresses
+    RewriteRule ^index\.html$ / [R=301,L]
 </IfModule>
 
-# Never serve the repo's own files
+# Never serve the repo's own files or the page parts in /inc
 <FilesMatch "^(README\.md|\.git.*)$">
     Require all denied
 </FilesMatch>
 RedirectMatch 404 /\.git
+RedirectMatch 404 ^/inc(/|$)
 
 <IfModule mod_headers.c>
     Header always set Strict-Transport-Security "max-age=31536000"
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-Frame-Options "SAMEORIGIN"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
-    <FilesMatch "\.(css|svg|png)$">
+    <FilesMatch "\.(css|js|svg|png)$">
         Header set Cache-Control "public, max-age=604800"
     </FilesMatch>
 </IfModule>

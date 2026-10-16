@@ -1,7 +1,7 @@
 <?php
 /**
  * chelkron.com — "Send us a message" form handler.
- * Emails the message to support. Answers JSON to the pop-up form, or redirects back to the page when JavaScript is off.
+ * Emails the message to support. Answers JSON to the form on /contact, or redirects back to /contact when JavaScript is off.
  * Spam guards: a hidden field people never fill, a minimum time on the form, and a limit per IP address.
  */
 const TO        = 'support@chelkron.com';
@@ -15,12 +15,12 @@ function done(bool $ok, string $msg, bool $json): void {
         http_response_code($ok ? 200 : 400);
         echo json_encode(['ok' => $ok, 'message' => $msg]);
     } else {
-        header('Location: /?' . ($ok ? 'sent=1' : 'error=' . rawurlencode($msg)) . '#contact');
+        header('Location: /contact?' . ($ok ? 'sent=1' : 'error=' . rawurlencode($msg)));
     }
     exit;
 }
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') { header('Location: /#contact'); exit; }
+if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') { header('Location: /contact'); exit; }
 
 $clean = fn($v, $max) => mb_substr(trim(str_replace(["\r", "\n", "\0"], ' ', (string)$v)), 0, $max);
 $name    = $clean($_POST['name'] ?? '', 100);

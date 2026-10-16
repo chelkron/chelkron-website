@@ -1,19 +1,28 @@
 # chelkron.com
 
-The Chelkron Technologies home page. Plain HTML and CSS, no build step.
+The Chelkron Technologies website. PHP pages that share one header, menu and footer; no build step.
 
-- `index.html` — the home page
-- `terms/index.html` — Terms of Use (served at /terms)
-- `privacy-policy/index.html` — Privacy Policy (served at /privacy-policy)
-- `assets/site.css` — styles
-- `assets/logo.svg`, `assets/favicon.png` — brand
-- `contact.php` — sends the "Send us a message" pop-up form to support@chelkron.com (needs PHP, which cPanel has)
-- `.htaccess` — HTTPS redirect, security headers, caching (Apache / cPanel)
-- `support/` — the support site, served at **support.chelkron.com** (see below)
+| Address | File | What's on it |
+|---|---|---|
+| `/` | `index.php` | Home: what we do, both products, free Mail offer |
+| `/workforce` | `workforce/index.php` | Chelkron Workforce: features and plans |
+| `/mail` | `mail/index.php` | Chelkron Mail: features and plans |
+| `/pricing` | `pricing/index.php` | Both price lists, the free Mail offer, questions |
+| `/about` | `about/index.php` | The company |
+| `/contact` | `contact/index.php` | Contact form (sent by `contact.php`) |
+| `/terms`, `/privacy-policy` | `terms/index.php`, `privacy-policy/index.php` | Legal pages |
+
+Shared parts (in `inc/`, never served directly):
+- `inc/layout.php` — the header, menu and footer. **The menu items are `SITE_NAV` at the top**; change them there and every page follows.
+- `inc/prices.php` — **every plan and price on the site**, in one list. Yearly prices are worked out from the monthly ones (10% off). Change prices here when the apps' prices change.
+- `inc/parts/` — the hero arc and the drawn product screenshots.
+
+Also: `assets/site.css` (styles), `assets/site.js` (phone menu, contact form), `.htaccess` (HTTPS, clean addresses, security headers, caching).
+Adding a page: make `newpage/index.php` like the others, add it to `SITE_NAV`, and add its name to the `RewriteRule` list in `.htaccess`.
 
 ## Publishing on cPanel (Orangehost)
 
-Upload `index.html`, `contact.php`, `.htaccess` and the `assets`, `terms` and `privacy-policy` folders into `public_html`, replacing what's there.
+Upload `index.php`, `contact.php`, `.htaccess` and the `assets`, `inc`, `workforce`, `mail`, `pricing`, `about`, `contact`, `terms` and `privacy-policy` folders into `public_html`. **Delete the old `index.html`** (and `terms/index.html`, `privacy-policy/index.html`) so they can't be served instead.
 Or use cPanel's **Git Version Control** to clone this repo and deploy it to `public_html`.
 
 Check the old site's files first: anything in `public_html` you still need (for example email
@@ -21,7 +30,7 @@ verification files or other folders) should stay.
 
 ## Contact form
 
-`contact.php` emails each message to `support@chelkron.com` from `noreply@chelkron.com`, with the
+`contact.php` emails each message from the form on /contact to `support@chelkron.com` from `noreply@chelkron.com`, with the
 visitor's address as Reply-To, so you can answer with Reply. Both addresses are at the top of the file.
 For the mail to arrive (and not land in spam), chelkron.com's SPF record must allow this cPanel server
 to send for the domain. Send a test message after publishing.

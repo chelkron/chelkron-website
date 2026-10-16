@@ -1,57 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Use · Chelkron</title>
-<meta name="description" content="The terms for using chelkron.com, Chelkron Workforce and Chelkron Mail.">
-<link rel="canonical" href="https://chelkron.com/terms">
-<meta name="theme-color" content="#0F2A5C">
-<link rel="icon" type="image/png" href="/assets/favicon.png">
-<link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=5">
-</head>
-<body>
-
-<header class="top">
-    <div class="wrap top-in">
-        <a class="brand" href="/" aria-label="Chelkron Technologies home">
-            <img src="/assets/logo.svg" alt="" width="30" height="33">
-            <span>Chelkron</span>
-        </a>
-        <nav class="nav" aria-label="Main">
-            <a href="/#products">Products</a>
-            <a href="/#approach">How we build</a>
-            <a href="/#contact">Contact</a>
-        </nav>
-        <a class="btn btn-ghost top-cta" href="/#products">Our products</a>
-        <button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu" onclick="menu(true)">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-    </div>
-</header>
-
-<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
-    <div class="wrap menu-top">
-        <a class="brand" href="/" onclick="menu(false)"><img src="/assets/logo.svg" alt="" width="30" height="33"><span>Chelkron</span></a>
-        <button type="button" class="menu-x" aria-label="Close menu" onclick="menu(false)">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>
-    </div>
-    <nav class="wrap menu-links" aria-label="Menu">
-        <a href="/#products">Products</a>
-        <a href="/#approach">How we build</a>
-        <a href="/#contact">Contact</a>
-    </nav>
-    <div class="wrap menu-foot">
-        <a class="btn btn-blue" href="https://workforce.chelkron.com/">Chelkron Workforce</a>
-        <a class="btn btn-ghost" href="https://mail.chelkron.com/">Chelkron Mail</a>
-    </div>
-</div>
-
-<main>
+<?php
+require __DIR__ . '/../inc/layout.php';
+site_head('Terms of Use', 'The terms for using chelkron.com, Chelkron Workforce and Chelkron Mail.', '/terms'); ?>
 <div class="legal-head">
     <div class="wrap">
         <h1>Terms of Use</h1>
@@ -114,41 +63,5 @@
 <section id="contact" aria-labelledby="contact-h"><h2 id="contact-h">16. Contact</h2><p>Questions about these terms: visit <a href="https://support.chelkron.com/">support.chelkron.com</a> or email <a href="mailto:support@chelkron.com">support@chelkron.com</a>.</p></section>
     </article>
 </div>
-</main>
 
-<footer class="foot">
-    <div class="wrap foot-in">
-        <a class="brand brand-sm" href="/"><img src="/assets/logo.svg" alt="" width="22" height="24"><span>Chelkron</span></a>
-        <nav aria-label="Products">
-            <a href="https://workforce.chelkron.com/">Workforce</a>
-            <a href="https://mail.chelkron.com/">Mail</a>
-            <a href="https://support.chelkron.com/">Support</a>
-        </nav>
-        <nav class="foot-legal" aria-label="Legal"><a href="/terms">Terms of Use</a><a href="/privacy-policy">Privacy Policy</a></nav>
-        <p>&copy; <span id="yr">2026</span> Chelkron Technologies Limited</p>
-    </div>
-</footer>
-<script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-// Phone menu: opens full screen, closes with the X, Escape or by choosing a link.
-function menu(open) {
-    var m = document.getElementById('menu'), btn = document.querySelector('.menu-btn');
-    m.hidden = !open;
-    document.body.classList.toggle('menu-open', open);
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    (open ? m.querySelector('.menu-x') : btn).focus({ preventScroll: true });
-}
-document.addEventListener('keydown', function(e) {
-    var m = document.getElementById('menu');
-    if (m.hidden) return;
-    if (e.key === 'Escape') { menu(false); return; }
-    if (e.key === 'Tab') {   // keep focus inside the open menu
-        var f = m.querySelectorAll('a, button'), first = f[0], last = f[f.length - 1];
-        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-    }
-});
-window.addEventListener('resize', function() { if (window.innerWidth > 760 && !document.getElementById('menu').hidden) menu(false); });
-</script>
-</body>
-</html>
+<?php site_foot(false); ?>
