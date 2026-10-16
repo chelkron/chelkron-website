@@ -8,7 +8,7 @@ site_head('Chelkron Workforce', 'CRM, HR, attendance, payroll, appraisals, tasks
         <div>
             <p class="eyebrow"><img src="/assets/workforce-icon.svg" alt="" width="28" height="28">Chelkron Workforce</p>
             <h1>Your whole company. One app.</h1>
-            <p class="lead">CRM, HR, payroll, appraisals, tasks and team chat in one place, set up in your words, your currency and your language.</p>
+            <p class="lead">CRM, HR, payroll, leave, appraisals, tasks and team chat in one place, set up in your words, your currency and your language.</p>
             <div class="hero-cta">
                 <a class="btn btn-blue" href="https://workforce.chelkron.com/signup">Start 14 days free</a>
                 <a class="btn btn-ghost btn-lg" href="#plans">See plans</a>
@@ -25,9 +25,13 @@ site_head('Chelkron Workforce', 'CRM, HR, attendance, payroll, appraisals, tasks
         <div class="fgrid">
             <div class="fcard"><h3>Clock in. No excuses.</h3><p>Staff clock in from their phones. Workforce checks location, office Wi-Fi and the device they use, so "I'm on my way" stops counting as attendance. Remote staff? Switch the rules off for them.</p></div>
             <div class="fcard"><h3>Payday in minutes, not days</h3><p>Set salaries once. Workforce works out income tax and pension for Nigeria, Ghana, Kenya and South Africa, or any country with your own tax bands, and hands every staff member a clean payslip.</p></div>
+            <div class="fcard"><h3>Leave, sorted</h3><p>Staff ask for leave from their phone and their head of department approves it. Everyone sees what they have left, public holidays are set once, and you can see who's off at a glance.</p></div>
+            <div class="fcard"><h3>Pay that follows attendance</h3><p>Hourly pay comes straight from clock-ins and paid leave. Choose whether absences reduce monthly salaries, and every payslip shows the month's attendance.</p></div>
             <div class="fcard"><h3>Every lead, followed up</h3><p>From first call to "payment received": every deal, every target, and who's chasing it. No more leads lost in someone's phone.</p></div>
             <div class="fcard"><h3>Your team, in sync</h3><p>Tasks with deadlines, a shared calendar, and team chat with voice notes, reactions and groups. Need a manager's eye? One tap raises an attention request.</p></div>
             <div class="fcard"><h3>Know who's delivering</h3><p>Reports that write themselves. Appraisals that are fair, consistent and on record.</p></div>
+            <div class="fcard"><h3>Set up in your words</h3><p>Pick your industry and Workforce talks the way your team does: artists instead of leads, candidates instead of deals. Pipelines, fields and scoring rules come ready.</p></div>
+            <div class="fcard"><h3>Departments with goals</h3><p>Give each department a head and the numbers it's judged on, set weekly goals, and see who needs attention from the dashboard.</p></div>
             <div class="fcard"><h3>Hand HR the keys, not the safe</h3><p>Let your HR or operations manager add and manage staff, while billing and salaries stay with you.</p></div>
             <div class="fcard"><h3>Lives on every phone</h3><p>Install it like an app. Get an alert the moment a task, meeting or message lands, and one tap takes you straight to it.</p></div>
             <div class="fcard"><h3>In your language</h3><p>English, French, Portuguese or Arabic, with right-to-left layouts for Arabic, so your whole team can use the same tools.</p></div>
