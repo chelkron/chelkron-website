@@ -52,3 +52,17 @@ window.addEventListener('resize', function () { if (window.innerWidth > 860 && !
             });
     });
 })();
+
+// A marketing partner's link (?ref=CODE, kept by inc/layout.php): pass it on to the Workforce and Mail sites,
+// which count the visit and remember the partner for the sign-up.
+(function () {
+    var ref = document.body.getAttribute('data-ref');
+    if (!ref) return;
+    document.querySelectorAll('a[href]').forEach(function (a) {
+        var u;
+        try { u = new URL(a.href); } catch (e) { return; }
+        if (!/^(workforce|mail)\.chelkron\.com$/.test(u.hostname) || /^\/(signin|admin)/.test(u.pathname)) return;
+        u.searchParams.set('ref', ref);
+        a.href = u.toString();
+    });
+})();
