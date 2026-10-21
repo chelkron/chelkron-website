@@ -16,9 +16,27 @@ const SITE_NAV = [
     '/about'     => 'About',
     '/contact'   => 'Contact',
 ];
-const SITE_CSS_VERSION = 6;
+const SITE_CSS_VERSION = 7;
 
 function site_e(string $s): string { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
+
+/**
+ * A marketing partner's code from their link (chelkron.com/workforce?ref=ADA), remembered here for 60 days.
+ * site.js adds it to every link to the Workforce and Mail sites, which check the code, count the visit and
+ * remember the partner themselves (their shared/partners.php). '' when there is none.
+ */
+function site_ref(): string {
+    static $ref = null;
+    if ($ref !== null) return $ref;
+    $clean = function ($v): string { $v = strtoupper(trim((string)$v)); return preg_match('/\A[A-Z0-9][A-Z0-9_-]{2,29}\z/', $v) ? $v : ''; };
+    $ref = $clean($_GET['ref'] ?? '');
+    if ($ref !== '' && !headers_sent()) {
+        setcookie('site_ref', $ref, ['expires' => time() + 60 * 86400, 'path' => '/', 'httponly' => true, 'samesite' => 'Lax',
+                                     'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off']);
+    }
+    if ($ref === '') $ref = $clean($_COOKIE['site_ref'] ?? '');
+    return $ref;
+}
 
 /** Everything from <!DOCTYPE> to the opening <main>. $title '' = the home page. */
 function site_head(string $title, string $desc, string $path, array $opt = []): void {
@@ -28,6 +46,7 @@ function site_head(string $title, string $desc, string $path, array $opt = []): 
     $links = '';
     foreach (SITE_NAV as $href => $label) $links .= '<a href="' . $href . '"' . $here($href) . '>' . site_e($label) . '</a>';
     $body = !empty($opt['body_class']) ? ' class="' . site_e($opt['body_class']) . '"' : '';
+    if (($ref = site_ref()) !== '') $body .= ' data-ref="' . site_e($ref) . '"';   // a partner's link: passed on to the product sites
     ?>
 <!DOCTYPE html>
 <html lang="en">
