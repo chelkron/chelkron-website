@@ -61,7 +61,7 @@ site_head('', 'Chelkron Technologies builds software that African businesses run
                     <li><b>Your address</b>you@yourcompany.com, for everyone on your team</li>
                     <li><b>Any device</b>Webmail, Outlook, and the mail app on your phone</li>
                     <li><b>Delivered</b>SPF, DKIM and DMARC set up with you, step by step</li>
-                    <li><b>Domains</b>Buy one at <a href="https://domains.chelkron.com/">domains.chelkron.com</a>, or bring the domain you already have</li>
+                    <li><b>Domains</b><span>Buy one at <a href="https://domains.chelkron.com/">domains.chelkron.com</a>, or bring the domain you already have</span></li>
                 </ul>
                 <div class="prod-cta">
                     <a class="btn btn-blue" href="/mail">Explore Mail</a>
