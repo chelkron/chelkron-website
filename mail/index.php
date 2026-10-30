@@ -23,7 +23,7 @@ site_head('Chelkron Mail', 'Professional email on your own domain. Webmail on an
     <div class="wrap">
         <h2 id="feat-h" class="sec-h">Email that works as hard as you do</h2>
         <div class="fgrid">
-            <div class="fcard"><h3>Your domain, in minutes</h3><p>Search, buy and connect a domain without leaving the app, or bring the one you already own. Every staff member gets their own address.</p></div>
+            <div class="fcard"><h3>Your domain, in minutes</h3><p>Search, buy and connect a domain without leaving the app, or bring the one you already own. Every staff member gets their own address. <a href="https://domains.chelkron.com/">Find a domain</a></p></div>
             <div class="fcard"><h3>Straight to the inbox</h3><p>We set up SPF, DKIM and DMARC with you, step by step: the behind-the-scenes checks that keep your emails out of spam.</p></div>
             <div class="fcard"><h3>The Mailbox</h3><p>Fast, clean webmail on any device. Several mailboxes side by side, instant new-mail alerts, and an app on your home screen. In four languages.</p></div>
             <div class="fcard"><h3>Keep the apps you love</h3><p>Outlook, Apple Mail or your phone's own mail app: they all work with Chelkron Mail.</p></div>

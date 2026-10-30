@@ -51,7 +51,7 @@ site_head('Pricing', 'Plans and prices for Chelkron Workforce and Chelkron Mail.
             <details><summary>How do I pay?</summary><p>Online through Paystack or Flutterwave, monthly or yearly. Yearly plans are paid once, upfront, for 12 months, at <?= SITE_YEARLY_OFF ?>% off.</p></details>
             <details><summary>Can I change plans later?</summary><p>Yes. Move up or down from the Billing page in the app whenever your team changes size.</p></details>
             <details><summary>I'm not in Nigeria. What will I pay?</summary><p>When you sign up, prices show in your local currency. The naira prices on this page are for Nigeria.</p></details>
-            <details><summary>Is a domain included with Chelkron Mail?</summary><p>No. You can bring a domain you already own for free, or search for and buy one inside Chelkron Mail. Domain registration is billed separately.</p></details>
+            <details><summary>Is a domain included with Chelkron Mail?</summary><p>No. You can bring a domain you already own for free, or search for and buy one at <a href="https://domains.chelkron.com/">domains.chelkron.com</a>. Domain registration is billed separately.</p></details>
             <details><summary>We're bigger than the largest plan.</summary><p>Talk to us at <a href="mailto:business@chelkron.com">business@chelkron.com</a> and we'll put together a plan for you.</p></details>
         </div>
         <p class="small">Prices are correct at the time of writing and may change. The price you pay is the one shown at checkout.</p>
