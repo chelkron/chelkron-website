@@ -13,6 +13,10 @@ DirectorySlash Off
 
     # Pages at clean addresses (/workforce, /pricing, /terms …) without a trailing-slash redirect
     RewriteRule ^(workforce|mail|pricing|about|contact|terms|privacy-policy)/?$ $1/index.php [L]
+    # Blog: the list, the RSS feed, and each post at /blog/<address> (inc/blog.php)
+    RewriteRule ^blog/?$ blog/index.php [L]
+    RewriteRule ^blog/feed\.xml$ blog/feed.php [L]
+    RewriteRule ^blog/([a-z0-9-]+)/?$ blog/post.php?slug=$1 [L,QSA]
     # Old addresses
     RewriteRule ^index\.html$ / [R=301,L]
 </IfModule>
@@ -23,6 +27,8 @@ DirectorySlash Off
 </FilesMatch>
 RedirectMatch 404 /\.git
 RedirectMatch 404 ^/inc(/|$)
+# Posts are read through /blog/<address>, not as raw files
+RedirectMatch 404 ^/blog/posts(/|$)
 
 <IfModule mod_headers.c>
     Header always set Strict-Transport-Security "max-age=31536000"

@@ -14,9 +14,10 @@ const SITE_NAV = [
     '/mail'      => 'Mail',
     '/pricing'   => 'Pricing',
     '/about'     => 'About',
+    '/blog'      => 'Blog',
     '/contact'   => 'Contact',
 ];
-const SITE_CSS_VERSION = 7;
+const SITE_CSS_VERSION = 8;
 
 function site_e(string $s): string { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
 
@@ -38,11 +39,15 @@ function site_ref(): string {
     return $ref;
 }
 
-/** Everything from <!DOCTYPE> to the opening <main>. $title '' = the home page. */
+/**
+ * Everything from <!DOCTYPE> to the opening <main>. $title '' = the home page.
+ * $opt: body_class; nav (the menu item to mark as current, e.g. '/blog' on a post); og_type ('article' for posts);
+ *       published (Y-m-d, posts); feed (true: link the blog's RSS feed)
+ */
 function site_head(string $title, string $desc, string $path, array $opt = []): void {
     $full = $title === '' ? 'Chelkron Technologies — software for African businesses' : $title . ' · Chelkron';
     $url  = 'https://chelkron.com' . ($path === '/' ? '/' : $path);
-    $here = fn(string $href) => $href === $path ? ' aria-current="page"' : '';
+    $here = fn(string $href) => $href === ($opt['nav'] ?? $path) ? ' aria-current="page"' : '';
     $links = '';
     foreach (SITE_NAV as $href => $label) $links .= '<a href="' . $href . '"' . $here($href) . '>' . site_e($label) . '</a>';
     $body = !empty($opt['body_class']) ? ' class="' . site_e($opt['body_class']) . '"' : '';
@@ -58,7 +63,9 @@ function site_head(string $title, string $desc, string $path, array $opt = []): 
 <link rel="canonical" href="<?= site_e($url) ?>">
 <meta property="og:title" content="<?= site_e($title === '' ? 'Chelkron Technologies' : $title . ' · Chelkron') ?>">
 <meta property="og:description" content="<?= site_e($desc) ?>">
-<meta property="og:type" content="website">
+<meta property="og:type" content="<?= site_e($opt['og_type'] ?? 'website') ?>">
+<?php if (!empty($opt['published'])): ?><meta property="article:published_time" content="<?= site_e($opt['published']) ?>"><?php endif; ?>
+<?php if (!empty($opt['feed'])): ?><link rel="alternate" type="application/rss+xml" title="Chelkron blog" href="https://chelkron.com/blog/feed.xml"><?php endif; ?>
 <meta property="og:url" content="<?= site_e($url) ?>">
 <meta name="theme-color" content="#0F2A5C">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
@@ -127,7 +134,7 @@ function site_foot(bool $talk = true): void {
                 <p>Built in Africa, for business in Africa.</p>
             </div>
             <nav aria-label="Products"><b>Products</b><a href="/workforce">Chelkron Workforce</a><a href="/mail">Chelkron Mail</a><a href="https://domains.chelkron.com/">Domains</a><a href="/pricing">Pricing</a></nav>
-            <nav aria-label="Company"><b>Company</b><a href="/about">About us</a><a href="/contact">Contact</a><a href="https://support.chelkron.com/">Support</a></nav>
+            <nav aria-label="Company"><b>Company</b><a href="/about">About us</a><a href="/blog">Blog</a><a href="/contact">Contact</a><a href="https://support.chelkron.com/">Support</a></nav>
             <nav aria-label="Sign in"><b>Sign in</b><a href="https://workforce.chelkron.com/signin">Workforce</a><a href="https://mail.chelkron.com/signin">Mail</a><a href="https://mailbox.chelkron.com/">Mailbox</a></nav>
         </div>
         <div class="foot-base">

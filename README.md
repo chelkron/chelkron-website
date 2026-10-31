@@ -56,3 +56,31 @@ Publishing on cPanel:
 Live chat uses Tawk.to (free), property "Chelkron Support". Its two IDs are at the top of the script in
 `support/index.html` (`TAWK_PROPERTY`, `TAWK_WIDGET`); emptied, "Start a chat" opens WhatsApp instead.
 Answer chats in the Tawk.to dashboard or its phone app.
+
+## Blog (chelkron.com/blog)
+
+Each post is a Markdown file in `blog/posts/`, named `<date>-<address>.md`. For example, `blog/posts/2026-11-05-payroll-tips.md` appears at **chelkron.com/blog/payroll-tips**.
+
+Start the file with these lines, then write the post:
+
+```
+---
+title: Five payroll mistakes small businesses make
+description: One or two sentences, shown in the list, on Google and in link previews.
+date: 2026-11-05
+tag: Guides
+---
+
+Your first paragraph…
+
+## A heading
+
+- a list item
+- **bold**, *italic*, [a link](https://chelkron.com/workforce)
+```
+
+- `author:` is optional (default "Chelkron Team"). `draft: true` hides a post until you remove that line.
+- A post dated in the future appears on that day by itself.
+- HTML inside a post is shown as text, never run.
+- To publish: merge into `main`, then in cPanel → Git Version Control, click **Update from Remote** (and **Deploy HEAD Commit** if you use it).
+- The list is at `/blog`, and the RSS feed at `/blog/feed.xml`.
