@@ -16,6 +16,14 @@ There are two ways to start a chat:
 
 Write your question and press **Send**. We usually reply within a few minutes, and our answer appears right in the chat.
 
+## Send us a screenshot or a file
+
+Tap the **paperclip** next to the message box to attach files: a screenshot of an error, a photo of your phone's settings, a document. You can send up to **5 files at a time, 10 MB each**, with or without a message.
+
+- Pictures show right in the chat; other files appear as a card you can download.
+- We can send files back too, like a setup guide or an invoice.
+- Only you and the Chelkron Support team can open the files in your chat.
+
 ## You won't miss our reply
 
 - If the chat is closed, a **red badge** on the bubble and on **Support** in the menu shows you have a new reply.
@@ -38,6 +46,6 @@ Anything that gets in the way of your work. For example:
 - Adding staff, payroll, attendance rules or permissions in Workforce
 - A question about your plan or a payment
 
-The more detail the better: tell us what you were doing, copy any error message word for word, and include the email address or company name involved. Never send a password in the chat. We'll never ask for it.
+Screenshots help a lot: show us what you see, tell us what you were doing, and include the email address or company name involved. Never send a password in the chat. We'll never ask for it.
 
 The chat is live now. Open your [Chelkron Mail](/mail) dashboard or [Chelkron Workforce](/workforce) and say hello.
