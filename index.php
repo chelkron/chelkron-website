@@ -1,16 +1,35 @@
 <?php
 require __DIR__ . '/inc/layout.php';
 require __DIR__ . '/inc/prices.php';
-site_head('', 'Chelkron Technologies builds software that African businesses run on. Chelkron Workforce runs your team; Chelkron Mail gives you email on your own domain.', '/'); ?>
+site_head('', 'Chelkron Technologies builds software that African businesses run on. Chelkron Workforce runs your team, Chelkron Mail gives you email on your own domain, and Chelkron Sites puts your business online.', '/'); ?>
 
-<section class="hero">
-    <?php require __DIR__ . '/inc/parts/arc.svg.php'; ?>
-    <div class="wrap hero-in">
-        <h1>We build the software African businesses run on.</h1>
-        <p class="lead">Your team, your sales, your payroll and your email, running from one place, on your phone, in your currency.</p>
-        <div class="hero-cta">
-            <a class="btn btn-light" href="/pricing">Start free for 14 days</a>
-            <a class="btn btn-line" href="#products">See the products</a>
+<section class="hero hero-mesh">
+    <div class="mesh" aria-hidden="true"></div>
+    <div class="wrap hero-in hero-grid">
+        <div>
+            <a class="pill" href="https://sites.chelkron.com"><b>New</b> Chelkron Sites: your business online today</a>
+            <h1>We build the software African businesses run on.</h1>
+            <p class="lead">Your team, your sales, your payroll, your email and your website, running from one place, on your phone, in your currency.</p>
+            <div class="hero-cta">
+                <a class="btn btn-blue btn-arrow" href="/pricing">Start free for 14 days</a>
+                <a class="btn btn-ghost btn-arrow" href="#products">See the products</a>
+            </div>
+        </div>
+        <div class="apps" aria-hidden="true">
+            <div class="app-card ac-wf">
+                <div class="ac-h"><img src="/assets/workforce-icon.svg" alt="" width="28" height="28"><span><b>Workforce</b><small>Good morning, Ada</small></span></div>
+                <div class="ac-stats"><div><small>Present today</small><b>18/21</b></div><div><small>Pipeline</small><b>₦48.2m</b></div><div><small>Payroll</small><b class="ok">Paid</b></div></div>
+                <div class="ac-row"><span class="dot t"></span>Send proposal to Okrika Foods<em>Due Friday</em></div>
+            </div>
+            <div class="app-card ac-mail">
+                <div class="ac-h"><img src="/assets/mail-icon.svg" alt="" width="28" height="28"><span><b>Mail</b><small>ceo@yourbusiness.com</small></span></div>
+                <div class="ac-row"><span class="av">CO</span><b>Chika Obi</b>&nbsp;· Quarterly report<em>09:41</em></div>
+                <div class="ac-dns"><span>SPF</span><span>DKIM</span><span>DMARC</span><i>Verified</i></div>
+            </div>
+            <div class="app-card ac-sites">
+                <div class="ac-h"><img src="/assets/sites-icon.svg" alt="" width="28" height="28"><span><b>Sites</b><small>mamaada.chelkron.site</small></span></div>
+                <div class="ac-order"><span class="n">₦</span><span><b>New order · ₦72,000</b><small>Pay on delivery · Rumuola</small></span></div>
+            </div>
         </div>
     </div>
 </section>
@@ -24,14 +43,15 @@ site_head('', 'Chelkron Technologies builds software that African businesses run
             <li>Your hottest lead, buried in someone's WhatsApp.</li>
             <li>A Gmail address on your business card.</li>
         </ul>
-        <p class="familiar-fix"><b>Chelkron fixes all of it.</b> Workforce runs your people, your sales and your payroll. Mail puts your business name on every email your team sends.</p>
+        <p class="familiar-fix"><b>Chelkron fixes all of it.</b> Workforce runs your people, your sales and your payroll. Mail puts your business name on every email your team sends. Sites puts your business online, with a shop customers can buy from.</p>
     </div>
 </section>
 
 <section class="products" id="products" aria-labelledby="products-h">
     <div class="wrap">
+        <p class="sec-kicker">Products</p>
         <h2 id="products-h" class="sec-h">Our products</h2>
-        <p class="sec-p">Each one works on its own. Use one, or both.</p>
+        <p class="sec-p">Each one works on its own. Use one, or all three.</p>
 
         <article class="prod">
             <div class="prod-copy">
@@ -70,6 +90,24 @@ site_head('', 'Chelkron Technologies builds software that African businesses run
             </div>
             <?php require __DIR__ . '/inc/parts/shot-mail.php'; ?>
         </article>
+
+        <article class="prod">
+            <div class="prod-copy">
+                <h3><img class="prod-icon" src="/assets/sites-icon.svg" alt="" width="44" height="44">Chelkron Sites</h3>
+                <p class="prod-lead">A beautiful website for your business, ready today.</p>
+                <ul class="feat">
+                    <li><b>Templates</b>Shops, restaurants, salons, churches, schools, consultants and more</li>
+                    <li><b>Edit on the page</b>Type straight onto your website; no designer needed</li>
+                    <li><b>Sell</b>A cart with pay on delivery, bank transfer or Paystack, straight to you</li>
+                    <li><b>Grow</b>Bookings, messages, Google-ready pages and a weekly overview</li>
+                </ul>
+                <div class="prod-cta">
+                    <a class="btn btn-blue" href="https://sites.chelkron.com">Explore Sites</a>
+                    <span class="from">14 days free, no card needed</span>
+                </div>
+            </div>
+            <?php require __DIR__ . '/inc/parts/shot-sites.php'; ?>
+        </article>
     </div>
 </section>
 
@@ -84,8 +122,10 @@ site_head('', 'Chelkron Technologies builds software that African businesses run
     </div>
 </section>
 
-<section class="approach" aria-labelledby="approach-h">
+<section class="approach approach-dark" aria-labelledby="approach-h">
+    <div class="glow" aria-hidden="true"></div>
     <div class="wrap">
+        <p class="sec-kicker">Our approach</p>
         <h2 id="approach-h" class="sec-h">How we build</h2>
         <div class="principles">
             <div>
@@ -104,5 +144,6 @@ site_head('', 'Chelkron Technologies builds software that African businesses run
         <p class="more-link"><a href="/about">More about Chelkron &rarr;</a></p>
     </div>
 </section>
+
 
 <?php site_foot(); ?>
