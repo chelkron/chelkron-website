@@ -4,23 +4,23 @@ site_head('Privacy Policy', 'How Chelkron collects, uses and protects personal i
 <div class="legal-head">
     <div class="wrap">
         <h1>Privacy Policy</h1>
-        <p>How Chelkron collects, uses and protects personal information across chelkron.com, Chelkron Workforce and Chelkron Mail.</p>
-        <p class="upd">Last updated: 7 October 2026</p>
+        <p>How Chelkron collects, uses and protects personal information across chelkron.com, Chelkron Workforce, Chelkron Mail and Chelkron Sites.</p>
+        <p class="upd">Last updated: 9 November 2026</p>
     </div>
 </div>
 <div class="wrap legal-wrap">
-    <nav class="legal-toc" aria-label="On this page"><b>On this page</b><a href="#who">Who we are</a><a href="#collect">What we collect</a><a href="#use">How we use it</a><a href="#ai">AI features</a><a href="#share">Who we share it with</a><a href="#transfers">International transfers</a><a href="#security">How we protect it</a><a href="#retention">How long we keep it</a><a href="#rights">Your rights</a><a href="#cookies">Cookies</a><a href="#children">Children</a><a href="#changes">Changes to this policy</a><a href="#contact">Contact</a></nav>
+    <nav class="legal-toc" aria-label="On this page"><b>On this page</b><a href="#who">Who we are</a><a href="#collect">What we collect</a><a href="#use">How we use it</a><a href="#sites">Visitors to websites on Chelkron Sites</a><a href="#ai">AI features</a><a href="#share">Who we share it with</a><a href="#transfers">International transfers</a><a href="#security">How we protect it</a><a href="#retention">How long we keep it</a><a href="#rights">Your rights</a><a href="#cookies">Cookies</a><a href="#children">Children</a><a href="#changes">Changes to this policy</a><a href="#contact">Contact</a></nav>
     <article class="legal">
 <section id="who" aria-labelledby="who-h"><h2 id="who-h">1. Who we are</h2><p><b>Chelkron Technologies Limited</b> (&ldquo;Chelkron&rdquo;, &ldquo;we&rdquo;) is a company registered in Nigeria. We follow the Nigeria Data Protection Act 2023 and the other data protection laws that apply to us.</p>
 <ul>
 <li>For your account, billing and use of this website, <b>we decide how your information is used</b> (we are the data controller).</li>
-<li>For information our customers put into the services, such as a company&rsquo;s staff records in Workforce or the emails in a Chelkron Mail mailbox, <b>our customer decides</b> and we process it on their behalf (we are the data processor). If you are a staff member of one of our customers, please contact your employer first; we will help them answer you.</li>
+<li>For information our customers put into the services, such as a company&rsquo;s staff records in Workforce, the emails in a Chelkron Mail mailbox, or the orders, bookings and messages a business&rsquo;s website receives on Chelkron Sites, <b>our customer decides</b> and we process it on their behalf (we are the data processor). If you are a staff member of one of our customers, please contact your employer first; if you bought from or contacted a business through its website, please contact that business first. We will help them answer you.</li>
 </ul></section>
 <section id="collect" aria-labelledby="collect-h"><h2 id="collect-h">2. What we collect</h2><h3>Information you give us</h3>
 <ul>
 <li><b>Account:</b> your name, email address, phone number, company name, country and industry, and your password (stored only in scrambled, hashed form).</li>
 <li><b>Billing:</b> your plan, payment amounts and payment references. Card details are entered on Paystack&rsquo;s page; we never see or store your card number.</li>
-<li><b>What you put into the services:</b> in Workforce, for example staff profiles and photos, departments, attendance (including location at clock-in when the workspace turns on location checks), tasks, reports, customer and sales records, payroll details such as salaries and deductions, appraisals, chat messages and uploaded files; in Chelkron Mail, your domains, mailbox settings, contacts and the emails stored in your mailboxes.</li>
+<li><b>What you put into the services:</b> in Workforce, for example staff profiles and photos, departments, attendance (including location at clock-in when the workspace turns on location checks), tasks, reports, customer and sales records, payroll details such as salaries and deductions, appraisals, chat messages and uploaded files; in Chelkron Mail, your domains, mailbox settings, contacts and the emails stored in your mailboxes; in Chelkron Sites, your websites&rsquo; text, pictures, products and prices, the payment details you choose to show (such as bank account details for transfers), your own Paystack keys (stored encrypted), and the orders, bookings and messages your websites receive, including buyers&rsquo; names, phone numbers, email and delivery addresses.</li>
 <li><b>Domain registrations:</b> the contact details registries require when you buy a domain through Chelkron Mail.</li>
 <li><b>Messages to us:</b> what you send through our contact form or by email.</li>
 </ul>
@@ -38,20 +38,28 @@ site_head('Privacy Policy', 'How Chelkron collects, uses and protects personal i
 <li><b>To tell you about changes</b> to the services, these terms or prices. We send marketing messages only if you agree, and you can stop them at any time.</li>
 </ul>
 <p>Where we rely on your consent, for example for phone notifications or location at clock-in, you can withdraw it at any time in your settings or by contacting us.</p></section>
-<section id="ai" aria-labelledby="ai-h"><h2 id="ai-h">4. AI features</h2><p>When you use an AI feature, such as a sales summary, an insight or a drafted email, the information needed for that request is sent to our AI provider, Anthropic, to produce the result, which is then shown to you. Under its commercial terms, Anthropic does not use this information to train its models. We don&rsquo;t use your content to train AI either. If you don&rsquo;t use AI features, nothing is sent.</p></section>
-<section id="share" aria-labelledby="share-h"><h2 id="share-h">5. Who we share it with</h2><p><b>We don&rsquo;t sell personal information.</b> We share it only with companies that help us run the services, and only what they need:</p>
+<section id="sites" aria-labelledby="sites-h"><h2 id="sites-h">4. Visitors to websites on Chelkron Sites</h2><p>Businesses use Chelkron Sites to publish their own websites. If you visit one of those websites:</p>
+<ul>
+<li><b>The business is responsible</b> for what it does with the details you send it in an order, a booking or a message. We store them for the business and send them on to it.</li>
+<li><b>We count visits without tracking you.</b> To show the business how many people visit, we record the page, the country, the kind of site you came from (such as Google or WhatsApp) and the kind of device. We set no cookies for this and don&rsquo;t store your IP address.</li>
+<li><b>Your cart stays in your browser</b> until you place the order.</li>
+<li>A business may add its own tools, such as Google Analytics or a Meta Pixel. Those are run by that business and those companies, under their own policies.</li>
+</ul></section>
+<section id="ai" aria-labelledby="ai-h"><h2 id="ai-h">5. AI features</h2><p>When you use an AI feature, such as a sales summary, an insight, a drafted email or text for your website, the information needed for that request is sent to our AI provider, Anthropic, to produce the result, which is then shown to you. Under its commercial terms, Anthropic does not use this information to train its models. We don&rsquo;t use your content to train AI either. If you don&rsquo;t use AI features, nothing is sent.</p></section>
+<section id="share" aria-labelledby="share-h"><h2 id="share-h">6. Who we share it with</h2><p><b>We don&rsquo;t sell personal information.</b> We share it only with companies that help us run the services, and only what they need:</p>
 <ul>
 <li><b>Paystack</b>: payments;</li>
-<li><b>Brevo</b> and <b>Amazon Web Services</b>: sending and delivering email;</li>
+<li><b>Mail.Baby</b>: sending and delivering email;</li>
+<li><b>Cloudflare</b>: serving websites made with Chelkron Sites, and connecting owners&rsquo; own domains to them;</li>
 <li><b>Name.com</b> and domain registries: domain registrations;</li>
 <li><b>Anthropic</b>: AI features, when you use them;</li>
 <li>the companies that host our servers.</li>
 </ul>
 <p>We may also share information when the law requires it, to protect people or our services from harm, or as part of a merger or sale of our business, in which case this policy will continue to protect it.</p></section>
-<section id="transfers" aria-labelledby="transfers-h"><h2 id="transfers-h">6. International transfers</h2><p>Some of the companies above process information outside Nigeria. When that happens we rely on the safeguards the Nigeria Data Protection Act allows, such as transfers to countries with adequate protection or contractual commitments from the provider.</p></section>
-<section id="security" aria-labelledby="security-h"><h2 id="security-h">7. How we protect it</h2><p>Information travels over encrypted connections (HTTPS/TLS), passwords are hashed, and access to customer data is limited to people who need it. No system is perfectly secure; if a breach affects your personal information, we will tell you and the authorities as the law requires.</p></section>
-<section id="retention" aria-labelledby="retention-h"><h2 id="retention-h">8. How long we keep it</h2><p>We keep your information while your account is open. When an account is closed, we delete its data within 30 days, apart from what the law requires us to keep, such as payment and tax records, which we keep for as long as required.</p></section>
-<section id="rights" aria-labelledby="rights-h"><h2 id="rights-h">9. Your rights</h2><p>You can ask us to:</p>
+<section id="transfers" aria-labelledby="transfers-h"><h2 id="transfers-h">7. International transfers</h2><p>Some of the companies above process information outside Nigeria. When that happens we rely on the safeguards the Nigeria Data Protection Act allows, such as transfers to countries with adequate protection or contractual commitments from the provider.</p></section>
+<section id="security" aria-labelledby="security-h"><h2 id="security-h">8. How we protect it</h2><p>Information travels over encrypted connections (HTTPS/TLS), passwords are hashed, and access to customer data is limited to people who need it. No system is perfectly secure; if a breach affects your personal information, we will tell you and the authorities as the law requires.</p></section>
+<section id="retention" aria-labelledby="retention-h"><h2 id="retention-h">9. How long we keep it</h2><p>We keep your information while your account is open. When an account is closed, we delete its data within 30 days, apart from what the law requires us to keep, such as payment and tax records, which we keep for as long as required.</p></section>
+<section id="rights" aria-labelledby="rights-h"><h2 id="rights-h">10. Your rights</h2><p>You can ask us to:</p>
 <ul>
 <li>tell you what personal information we hold about you and give you a copy;</li>
 <li>correct information that is wrong or incomplete;</li>
@@ -60,15 +68,15 @@ site_head('Privacy Policy', 'How Chelkron collects, uses and protects personal i
 <li>give you your information in a format you can take to another service.</li>
 </ul>
 <p>Email <a href="mailto:support@chelkron.com">support@chelkron.com</a>. We reply within 14 business days and may need to confirm who you are first. If you are unhappy with how we handle your information, you can complain to the Nigeria Data Protection Commission (ndpc.gov.ng).</p></section>
-<section id="cookies" aria-labelledby="cookies-h"><h2 id="cookies-h">10. Cookies</h2><p>We only use cookies the services need to work. We don&rsquo;t use advertising cookies or trackers that follow you around the web.</p>
+<section id="cookies" aria-labelledby="cookies-h"><h2 id="cookies-h">11. Cookies</h2><p>We only use cookies the services need to work. We don&rsquo;t use advertising cookies or trackers that follow you around the web.</p>
 <ul>
 <li><b>Sign-in:</b> keeps you signed in and protects forms from misuse.</li>
 <li><b>Country and language:</b> remembers your country, currency and language so you don&rsquo;t have to choose them again.</li>
 </ul>
-<p>The apps also keep a few settings in your browser, such as notification preferences. You can clear cookies and site data in your browser settings at any time; you will then need to sign in again.</p></section>
-<section id="children" aria-labelledby="children-h"><h2 id="children-h">11. Children</h2><p>The services are for businesses and adults. They aren&rsquo;t meant for anyone under 18, and we don&rsquo;t knowingly collect information about children for our own purposes.</p></section>
-<section id="changes" aria-labelledby="changes-h"><h2 id="changes-h">12. Changes to this policy</h2><p>We may update this policy. If a change matters, we&rsquo;ll tell you by email or in the services before it takes effect. The date at the top shows when it was last updated.</p></section>
-<section id="contact" aria-labelledby="contact-h"><h2 id="contact-h">13. Contact</h2><p>Questions or requests about your personal information: email <a href="mailto:support@chelkron.com">support@chelkron.com</a> or visit <a href="https://support.chelkron.com/">support.chelkron.com</a>.</p></section>
+<p>The apps also keep a few settings in your browser, such as notification preferences. Websites made with Chelkron Sites set no cookies of ours; they keep your cart in your browser. You can clear cookies and site data in your browser settings at any time; you will then need to sign in again.</p></section>
+<section id="children" aria-labelledby="children-h"><h2 id="children-h">12. Children</h2><p>The services are for businesses and adults. They aren&rsquo;t meant for anyone under 18, and we don&rsquo;t knowingly collect information about children for our own purposes.</p></section>
+<section id="changes" aria-labelledby="changes-h"><h2 id="changes-h">13. Changes to this policy</h2><p>We may update this policy. If a change matters, we&rsquo;ll tell you by email or in the services before it takes effect. The date at the top shows when it was last updated.</p></section>
+<section id="contact" aria-labelledby="contact-h"><h2 id="contact-h">14. Contact</h2><p>Questions or requests about your personal information: email <a href="mailto:support@chelkron.com">support@chelkron.com</a> or visit <a href="https://support.chelkron.com/">support.chelkron.com</a>.</p></section>
     </article>
 </div>
 
