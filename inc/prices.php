@@ -19,8 +19,8 @@ const SITE_PLANS = [
     'mail' => [
         'name' => 'Chelkron Mail', 'signup' => 'https://mail.chelkron.com/signup', 'unit' => 'mailboxes',
         'plans' => [
-            ['name' => 'Starter',    'price' => 2900,  'limit' => 'Up to 5 mailboxes',  'points' => ['10 GB per mailbox', 'Your own domain', 'The Mailbox webmail app']],
-            ['name' => 'Business',   'price' => 9500,  'limit' => 'Up to 20 mailboxes', 'points' => ['10 GB per mailbox', 'Everything in Starter', 'Aliases and catch-all'], 'pick' => true],
+            ['name' => 'Starter',    'price' => 2900,  'limit' => 'Up to 5 mailboxes',  'points' => ['10 GB per mailbox', 'Your own domain', 'The Mailbox webmail app', 'Aliases and group addresses']],
+            ['name' => 'Business',   'price' => 9500,  'limit' => 'Up to 20 mailboxes', 'points' => ['10 GB per mailbox', 'Everything in Starter', 'Catch-all address'], 'pick' => true],
             ['name' => 'Enterprise', 'price' => 32000, 'limit' => 'Up to 50 mailboxes', 'points' => ['20 GB per mailbox', 'Everything in Business', 'Priority support']],
         ],
         'more' => 'More than 50 mailboxes?',
