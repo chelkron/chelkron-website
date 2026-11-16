@@ -5,7 +5,7 @@ site_head('Privacy Policy', 'How Chelkron collects, uses and protects personal i
     <div class="wrap">
         <h1>Privacy Policy</h1>
         <p>How Chelkron collects, uses and protects personal information across chelkron.com, Chelkron Workforce, Chelkron Mail and Chelkron Sites.</p>
-        <p class="upd">Last updated: 9 November 2026</p>
+        <p class="upd">Last updated: 17 November 2026</p>
     </div>
 </div>
 <div class="wrap legal-wrap">
@@ -53,6 +53,7 @@ site_head('Privacy Policy', 'How Chelkron collects, uses and protects personal i
 <li><b>Cloudflare</b>: serving websites made with Chelkron Sites, and connecting owners&rsquo; own domains to them;</li>
 <li><b>Name.com</b> and domain registries: domain registrations;</li>
 <li><b>Anthropic</b>: AI features, when you use them;</li>
+<li><b>Meta</b> and <b>Google</b>: measuring our own ads, through tags on our public pages (see Cookies);</li>
 <li>the companies that host our servers.</li>
 </ul>
 <p>We may also share information when the law requires it, to protect people or our services from harm, or as part of a merger or sale of our business, in which case this policy will continue to protect it.</p></section>
@@ -68,10 +69,11 @@ site_head('Privacy Policy', 'How Chelkron collects, uses and protects personal i
 <li>give you your information in a format you can take to another service.</li>
 </ul>
 <p>Email <a href="mailto:support@chelkron.com">support@chelkron.com</a>. We reply within 14 business days and may need to confirm who you are first. If you are unhappy with how we handle your information, you can complain to the Nigeria Data Protection Commission (ndpc.gov.ng).</p></section>
-<section id="cookies" aria-labelledby="cookies-h"><h2 id="cookies-h">11. Cookies</h2><p>We only use cookies the services need to work. We don&rsquo;t use advertising cookies or trackers that follow you around the web.</p>
+<section id="cookies" aria-labelledby="cookies-h"><h2 id="cookies-h">11. Cookies</h2><p>Inside the services (your mailbox, dashboard and workspace) we only use cookies the services need to work.</p>
 <ul>
 <li><b>Sign-in:</b> keeps you signed in and protects forms from misuse.</li>
 <li><b>Country and language:</b> remembers your country, currency and language so you don&rsquo;t have to choose them again.</li>
+<li><b>Advertising, on our public pages only:</b> the home, features and pricing pages of Chelkron Mail, Workforce and Sites, and their sign-up pages, use the Meta Pixel and the Google tag. They set cookies that tell Meta and Google when someone visits those pages or signs up after seeing one of our ads, so we can tell which ads work. They are not used inside the services, and nothing from your emails, staff records or website is sent to them. You can block them in your browser, or change your ad settings on Facebook and Google.</li>
 </ul>
 <p>The apps also keep a few settings in your browser, such as notification preferences. Websites made with Chelkron Sites set no cookies of ours; they keep your cart in your browser. You can clear cookies and site data in your browser settings at any time; you will then need to sign in again.</p></section>
 <section id="children" aria-labelledby="children-h"><h2 id="children-h">12. Children</h2><p>The services are for businesses and adults. They aren&rsquo;t meant for anyone under 18, and we don&rsquo;t knowingly collect information about children for our own purposes.</p></section>
