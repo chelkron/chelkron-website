@@ -355,7 +355,7 @@ section[id]{scroll-margin-top:72px}
 .contact-side p{margin:0 0 14px;color:var(--slate);font-size:16px}
 
 /* Footer (v6) */
-.foot-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:32px;padding:24px 0 32px}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(4,minmax(0,1fr));gap:32px;padding:24px 0 32px}
 .foot-brand p{margin:12px 0 0;color:var(--slate);font-size:15px}
 .foot-grid nav{display:flex;flex-direction:column;gap:10px}
 .foot-grid nav b{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:4px}
