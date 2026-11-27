@@ -6,7 +6,7 @@ site_head('Pricing', 'Plans and prices for Chelkron Workforce and Chelkron Mail.
 <section class="page-head">
     <div class="wrap">
         <h1>Pay monthly. Or pay yearly and keep <?= SITE_YEARLY_OFF ?>%.</h1>
-        <p>Every plan starts with 14 days free. Prices below are in naira; outside Nigeria you'll see them in your own currency when you sign up.</p>
+        <p>Every plan starts with 14 days free. Prices are shown in your currency. Change it at the bottom of the page.</p>
         <nav class="jump" aria-label="On this page"><a href="/packages">Packages: all three, for less</a><a href="#workforce">Chelkron Workforce</a><a href="#mail">Chelkron Mail</a><a href="#bundle">Free Mail with Workforce</a><a href="#questions">Questions</a></nav>
     </div>
 </section>
@@ -50,7 +50,7 @@ site_head('Pricing', 'Plans and prices for Chelkron Workforce and Chelkron Mail.
             <details><summary>What happens after the 14 free days?</summary><p>Choose a plan and pay to keep going. If you don't, your account pauses. Your data stays safe, and paying unlocks it straight away.</p></details>
             <details><summary>How do I pay?</summary><p>Online through Paystack or Flutterwave, monthly or yearly. Yearly plans are paid once, upfront, for 12 months, at <?= SITE_YEARLY_OFF ?>% off.</p></details>
             <details><summary>Can I change plans later?</summary><p>Yes. Move up or down from the Billing page in the app whenever your team changes size.</p></details>
-            <details><summary>I'm not in Nigeria. What will I pay?</summary><p>When you sign up, prices show in your local currency. The naira prices on this page are for Nigeria.</p></details>
+            <details><summary>I'm not in Nigeria. What will I pay?</summary><p>The prices on this page are already in your currency, at today's exchange rate. Choose a different country at the bottom of the page to see its prices.</p></details>
             <details><summary>Is a domain included with Chelkron Mail?</summary><p>No. You can bring a domain you already own for free, or search for and buy one at <a href="https://domains.chelkron.com/">domains.chelkron.com</a>. Domain registration is billed separately.</p></details>
             <details><summary>We're bigger than the largest plan.</summary><p>Talk to us at <a href="mailto:business@chelkron.com">business@chelkron.com</a> and we'll put together a plan for you.</p></details>
         </div>

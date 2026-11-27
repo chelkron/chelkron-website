@@ -522,3 +522,5 @@ section[id]{scroll-margin-top:72px}
   .approach-dark{padding:112px 0 104px;clip-path:polygon(0 40px,100% 0,100% calc(100% - 40px),0 100%);margin:-20px 0}
   .ss-hero{grid-template-columns:1fr}.ss-photo{height:70px}
 }
+.foot-cur{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--slate)}
+.foot-cur select{height:34px;padding:0 10px;border:1px solid var(--line);border-radius:8px;background:#FFFFFF;font:inherit;color:var(--ink);max-width:240px}

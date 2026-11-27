@@ -19,7 +19,8 @@ const SITE_NAV = [
     '/blog'      => 'Blog',
     '/contact'   => 'Contact',
 ];
-const SITE_CSS_VERSION = 10;
+const SITE_CSS_VERSION = 11;
+require_once __DIR__ . '/currency.php';   // prices in the visitor's currency
 
 function site_e(string $s): string { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
 
@@ -47,6 +48,9 @@ function site_ref(): string {
  *       published (Y-m-d, posts); feed (true: link the blog's RSS feed)
  */
 function site_head(string $title, string $desc, string $path, array $opt = []): void {
+    site_country_pick();   // ?country=… from the footer picker
+    site_country();        // decided before any output, so its cookie can be set
+    if (!headers_sent()) header('Vary: Cookie');
     $full = $title === '' ? 'Chelkron Technologies — software for African businesses' : $title . ' · Chelkron';
     $url  = 'https://chelkron.com' . ($path === '/' ? '/' : $path);
     $here = fn(string $href) => $href === ($opt['nav'] ?? $path) ? ' aria-current="page"' : '';
@@ -142,6 +146,9 @@ function site_foot(bool $talk = true): void {
         </div>
         <div class="foot-base">
             <p>&copy; <span id="yr">2026</span> Chelkron Technologies Limited</p>
+            <form class="foot-cur" method="get" action=""><label for="foot-country">Prices in</label>
+                <select id="foot-country" name="country" onchange="this.form.submit()"><?php foreach (site_countries() as $cc => $c): ?><option value="<?= $cc ?>"<?= $cc === site_country() ? ' selected' : '' ?>><?= site_e($c[0] . ' · ' . ($c[1] === 'USD' ? 'US$' : trim($c[2]))) ?></option><?php endforeach; ?></select>
+                <noscript><button type="submit">Go</button></noscript></form>
             <nav class="foot-legal" aria-label="Legal"><a href="/terms">Terms of Use</a><a href="/privacy-policy">Privacy Policy</a></nav>
         </div>
     </div>
