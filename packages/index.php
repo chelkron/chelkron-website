@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../inc/layout.php';
 require __DIR__ . '/../inc/prices.php';
-site_head('Packages', 'Chelkron packs: your website, business email and staff software together, with one payment and one renewal date. From ₦12,500 a month.', '/packages'); ?>
+site_head('Packages', 'Chelkron packs: your website, business email and staff software together, with one payment and one renewal date. From ' . site_naira(SITE_PACKS['starter']['price']) . ' a month.', '/packages'); ?>
 
 <section class="page-head">
     <div class="wrap">
@@ -15,7 +15,7 @@ site_head('Packages', 'Chelkron packs: your website, business email and staff so
 <section class="plans-sec" id="packs" aria-labelledby="packs-h">
     <div class="wrap">
         <h2 id="packs-h" class="plans-h"><img src="/assets/sites-icon.svg" alt="" width="36" height="36"><img src="/assets/mail-icon.svg" alt="" width="36" height="36"><img src="/assets/workforce-icon.svg" alt="" width="36" height="36">Choose your pack</h2>
-        <p class="sec-p">Prices are in naira, a month. Pay for a year and get 2 months free.</p>
+        <p class="sec-p">Prices are a month, in your currency. Pay for a year and get 2 months free.</p>
         <?php site_pack_cards(); ?>
         <p class="plans-more">Want just one product? See <a href="/pricing">all plans and prices</a>.</p>
     </div>

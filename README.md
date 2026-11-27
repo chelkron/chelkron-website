@@ -16,6 +16,7 @@ The Chelkron Technologies website. PHP pages that share one header, menu and foo
 Shared parts (in `inc/`, never served directly):
 - `inc/layout.php` — the header, menu and footer. **The menu items are `SITE_NAV` at the top**; change them there and every page follows.
 - `inc/prices.php` — **every plan and price on the site**, in one list. Yearly prices are worked out from the monthly ones (10% off). Change prices here when the apps' prices change.
+- `inc/currency.php` — **prices in the visitor's currency**. Prices in `inc/prices.php` stay in naira (what Chelkron charges); every page shows them in the visitor's currency at today's rate (Cloudflare's country header, else an IP look-up, else Nigeria; the "Prices in" picker at the bottom of every page overrides it). Rates are fetched once a day from open.er-api.com and kept in the server's temp folder.
 - `inc/parts/` — the hero arc and the drawn product screenshots.
 
 Also: `assets/site.css` (styles), `assets/site.js` (phone menu, contact form), `.htaccess` (HTTPS, clean addresses, security headers, caching).

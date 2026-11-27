@@ -60,7 +60,8 @@ function site_pack_cards(): void { ?>
 <?php
 }
 
-function site_naira(int $n): string { return '₦' . number_format($n); }
+/** A naira price (what Chelkron charges) shown in the visitor's currency (inc/currency.php). */
+function site_naira(float $n): string { return site_money($n); }
 /** Per month when paid yearly, and the yearly total. */
 function site_yearly(int $monthly): array {
     $pm = (int)round($monthly * (100 - SITE_YEARLY_OFF) / 100);
