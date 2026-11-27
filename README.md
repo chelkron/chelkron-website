@@ -8,6 +8,7 @@ The Chelkron Technologies website. PHP pages that share one header, menu and foo
 | `/workforce` | `workforce/index.php` | Chelkron Workforce: features and plans |
 | `/mail` | `mail/index.php` | Chelkron Mail: features and plans |
 | `/pricing` | `pricing/index.php` | Both price lists, the free Mail offer, questions |
+| `/packages` | `packages/index.php` | Chelkron packs (Sites + Mail + Workforce, paid on Chelkron Sites), questions |
 | `/about` | `about/index.php` | The company |
 | `/contact` | `contact/index.php` | Contact form (sent by `contact.php`) |
 | `/terms`, `/privacy-policy` | `terms/index.php`, `privacy-policy/index.php` | Legal pages |
@@ -22,7 +23,7 @@ Adding a page: make `newpage/index.php` like the others, add it to `SITE_NAV`, a
 
 ## Publishing on cPanel (Orangehost)
 
-Upload `index.php`, `contact.php`, `.htaccess` and the `assets`, `inc`, `workforce`, `mail`, `pricing`, `about`, `contact`, `terms` and `privacy-policy` folders into `public_html`. **Delete the old `index.html`** (and `terms/index.html`, `privacy-policy/index.html`) so they can't be served instead.
+Upload `index.php`, `contact.php`, `.htaccess` and the `assets`, `inc`, `workforce`, `mail`, `pricing`, `packages`, `about`, `contact`, `terms` and `privacy-policy` folders into `public_html`. **Delete the old `index.html`** (and `terms/index.html`, `privacy-policy/index.html`) so they can't be served instead.
 Or use cPanel's **Git Version Control** to clone this repo and deploy it to `public_html`.
 
 Check the old site's files first: anything in `public_html` you still need (for example email

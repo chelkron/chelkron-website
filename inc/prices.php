@@ -1,6 +1,6 @@
 <?php
 /**
- * chelkron.com — plans and prices shown on /pricing, /workforce and /mail.
+ * chelkron.com — plans and prices shown on /pricing, /packages, /workforce and /mail.
  * Naira, monthly. The yearly price is 10% off (both apps' shared/cycle.php). Keep in step with the apps' billing pages.
  */
 const SITE_YEARLY_OFF = 10;
@@ -26,6 +26,39 @@ const SITE_PLANS = [
         'more' => 'More than 50 mailboxes?',
     ],
 ];
+
+/**
+ * Chelkron packs: Sites + Mail + Workforce, one payment on Chelkron Sites (its lib/billing.php sites_packages()).
+ * A year is 10 months' price there (2 months free). Keep in step with Sites.
+ */
+const SITE_PACKS = [
+    'starter'  => ['name' => 'Starter pack',  'price' => 12500, 'normal' => 14800, 'for' => 'For a small business getting started',
+                   'points' => ['Chelkron Sites Starter: your website with a shop', 'Chelkron Mail Starter: 5 mailboxes on your domain', 'Chelkron Workforce Micro: up to 5 staff']],
+    'business' => ['name' => 'Business pack', 'price' => 27500, 'normal' => 34000, 'for' => 'For a growing team that sells online', 'pick' => true,
+                   'points' => ['Chelkron Sites Business: 200 products, Paystack checkout', 'Chelkron Mail Business: 20 mailboxes, catch-all address', 'Chelkron Workforce Starter: up to 10 staff']],
+    'pro'      => ['name' => 'Pro pack',      'price' => 75000, 'normal' => 94000, 'for' => 'For a busy company with a big team',
+                   'points' => ['Chelkron Sites Store: unlimited products', 'Chelkron Mail Enterprise: 50 mailboxes, 20 GB each', 'Chelkron Workforce Growth: up to 30 staff']],
+];
+const SITE_PACK_URL = 'https://sites.chelkron.com/package?p=';
+
+/** The pack cards. */
+function site_pack_cards(): void { ?>
+<div class="plans plans-3 plans-packs">
+<?php foreach (SITE_PACKS as $key => $pk) { ?>
+    <div class="plan<?= !empty($pk['pick']) ? ' plan-pick' : '' ?>">
+        <?php if (!empty($pk['pick'])): ?><span class="plan-badge">Most popular</span><?php endif; ?>
+        <h3><?= site_e($pk['name']) ?></h3>
+        <p class="plan-limit"><?= site_e($pk['for']) ?></p>
+        <p class="plan-price"><b><?= site_naira($pk['price']) ?></b><span>/month</span></p>
+        <p class="plan-year"><s><?= site_naira($pk['normal']) ?></s> if bought separately: <b>save <?= site_naira($pk['normal'] - $pk['price']) ?> a month</b>
+            <span>or <?= site_naira($pk['price'] * 10) ?> a year (2 months free)</span></p>
+        <ul><?php foreach ($pk['points'] as $pt) echo '<li>' . site_e($pt) . '</li>'; ?><li>One payment, one renewal date</li></ul>
+        <a class="btn <?= !empty($pk['pick']) ? 'btn-blue' : 'btn-ghost' ?>" href="<?= site_e(SITE_PACK_URL . $key) ?>">Get the <?= site_e($pk['name']) ?></a>
+    </div>
+<?php } ?>
+</div>
+<?php
+}
 
 function site_naira(int $n): string { return '₦' . number_format($n); }
 /** Per month when paid yearly, and the yearly total. */
