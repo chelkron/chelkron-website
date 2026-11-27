@@ -7,7 +7,7 @@ site_head('Pricing', 'Plans and prices for Chelkron Workforce and Chelkron Mail.
     <div class="wrap">
         <h1>Pay monthly. Or pay yearly and keep <?= SITE_YEARLY_OFF ?>%.</h1>
         <p>Every plan starts with 14 days free. Prices below are in naira; outside Nigeria you'll see them in your own currency when you sign up.</p>
-        <nav class="jump" aria-label="On this page"><a href="#workforce">Chelkron Workforce</a><a href="#mail">Chelkron Mail</a><a href="#bundle">Free Mail with Workforce</a><a href="#questions">Questions</a></nav>
+        <nav class="jump" aria-label="On this page"><a href="/packages">Packages: all three, for less</a><a href="#workforce">Chelkron Workforce</a><a href="#mail">Chelkron Mail</a><a href="#bundle">Free Mail with Workforce</a><a href="#questions">Questions</a></nav>
     </div>
 </section>
 

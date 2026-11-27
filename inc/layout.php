@@ -14,11 +14,12 @@ const SITE_NAV = [
     '/mail'      => 'Mail',
     'https://sites.chelkron.com' => 'Sites',
     '/pricing'   => 'Pricing',
+    '/packages'  => 'Packages',
     '/about'     => 'About',
     '/blog'      => 'Blog',
     '/contact'   => 'Contact',
 ];
-const SITE_CSS_VERSION = 9;
+const SITE_CSS_VERSION = 10;
 
 function site_e(string $s): string { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
 
@@ -134,7 +135,7 @@ function site_foot(bool $talk = true): void {
                 <a class="brand brand-sm" href="/"><img src="/assets/logo.svg" alt="" width="22" height="24"><span>Chelkron</span></a>
                 <p>Built in Africa, for business in Africa.</p>
             </div>
-            <nav aria-label="Products"><b>Products</b><a href="/workforce">Chelkron Workforce</a><a href="/mail">Chelkron Mail</a><a href="https://domains.chelkron.com/">Domains</a><a href="/pricing">Pricing</a></nav>
+            <nav aria-label="Products"><b>Products</b><a href="/workforce">Chelkron Workforce</a><a href="/mail">Chelkron Mail</a><a href="https://domains.chelkron.com/">Domains</a><a href="/pricing">Pricing</a><a href="/packages">Packages</a></nav>
             <nav aria-label="Company"><b>Company</b><a href="/about">About us</a><a href="/blog">Blog</a><a href="/contact">Contact</a><a href="https://support.chelkron.com/">Support</a></nav>
             <nav aria-label="Follow us"><b>Follow us</b><a href="https://www.facebook.com/899473249913964" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/chelkron" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@chelkron" target="_blank" rel="noopener">TikTok</a><a href="https://www.linkedin.com/company/105374465" target="_blank" rel="noopener">LinkedIn</a></nav>
             <nav aria-label="Sign in"><b>Sign in</b><a href="https://workforce.chelkron.com/signin">Workforce</a><a href="https://mail.chelkron.com/signin">Mail</a><a href="https://mailbox.chelkron.com/">Mailbox</a></nav>

@@ -291,6 +291,9 @@ body{--accent:var(--blue);--accent-bg:#EFF6FF}
 .plan-pick{border:2px solid var(--pc,var(--blue));box-shadow:0 30px 60px -36px rgba(15,42,92,.45)}
 .plans-workforce{--pc:var(--teal)}
 .plans-mail{--pc:var(--blue)}
+.plans-packs{--pc:var(--blue)}
+.plan-year s{color:var(--slate)}
+.plans-h img+img{margin-inline-start:-6px}
 .plan-badge{position:absolute;top:-13px;left:24px;height:26px;padding:0 12px;border-radius:999px;background:var(--pc,var(--blue));color:#FFFFFF;font-size:12px;font-weight:600;display:inline-flex;align-items:center}
 .plan h3{margin:0;font-size:20px;font-weight:600}
 .plan-limit{margin:4px 0 18px;color:var(--slate);font-size:15px}
